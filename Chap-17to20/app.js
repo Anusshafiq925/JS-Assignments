@@ -82,17 +82,55 @@ var Userinput = prompt("Please Enter an item");
 
 var available = "no";
 
-for (var i = 0; i < a.length; i++) {
-  if (a[i] === Userinput) {
+for (var i = 0; i < a.length; i++)
+  if (Userinput === a[i]) {
     available = "yes";
-  }
-  if (available === "yes") {
     document.write(
       `<br /> ${Userinput} is available at index ${i} in our bakery <br />`
     );
-  } else {
-    document.write(
-      `<br />We are sorry. ${Userinput} is not available in our bakery <br />`
-    );
+  }
+if (available === "no") {
+  document.write(
+    `<br />We are sorry. ${Userinput} is not available in our bakery <br />`
+  );
+}
+
+// Question no 8
+
+var num = [24, 53, 78, 91, 12];
+document.write(`<br /> Array Items: ${num} <br />`);
+
+var largestNum = num[0];
+
+for (var i = 1; i < num.length; i++) {
+  if (num[i] > largestNum) {
+    largestNum = num[i];
+  }
+}
+
+document.write(`<br />Largest Number is: ${largestNum} <br /><br />`);
+
+// Question no 9
+
+var num1 = [24, 53, 78, 91, 12];
+document.write(`<br /> Array Items: ${num1} <br />`);
+
+var smallestNum = num[0];
+
+for (var i = 1; i < num1.length; i++) {
+  if (num[i] < largestNum) {
+    smallestNum = num1[i];
+  }
+}
+
+document.write(`<br />Smallest Number is: ${smallestNum} <br /><br />`);
+
+// Question no 10
+
+document.write("Multiples of 5 ranging 1 to 100." + "<br />");
+
+for (var i = 1; i <= 100; i++) {
+  if (i % 5 === 0) {
+    document.write(`${i}, `);
   }
 }
